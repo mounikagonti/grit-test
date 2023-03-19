@@ -1,0 +1,52 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  &_wrapper {
+    background-color: $white_color;
+    box-shadow: $box_shadow;
+    border-radius: 0 0 50px 50px;
+    padding: 0 30px;
+    background: #fff;
+    height: 90px;
+    @include layoutWithFlex(center, space-between);
+    .header_left {
+      @include layoutWithFlex(center, center);
+      &_logo {
+        height: 50px;
+        width: 50px;
+      }
+      .brand_name_container {
+        font-size: 30px;
+        font-weight: 600;
+        margin-left: 10px;
+        .industry {
+          color: $primary_color;
+        }
+        .technology {
+          margin-left: 10px;
+          color: $secondary_color;
+        }
+      }
+    }
+  }
+  &_right {
+    @include layoutWithFlex(center, center);
+    font-size: 16px;
+    color: $brand_color;
+    a {
+      color: $brand_color_hover;
+      font-size: 16px;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 10px 0 10px 45px;
+    }
+    .educator {
+      margin-right: 10px;
+    }
+    &:hover {
+      color: $primary_color;
+    }
+  }
+}

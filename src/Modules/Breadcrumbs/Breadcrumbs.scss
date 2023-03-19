@@ -1,0 +1,23 @@
+.breadcrumbs {
+  background-color: #def7e5;
+  width: 100%;
+  .breadcrumbs_wrapper {
+    height: 70px;
+    .breadcrumbs_content {
+      height: 100%;
+      @include layoutWithFlex(center, flex-start);
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      .home {
+        color: $brand_color;
+      }
+      .slash {
+        color: $primary_color;
+      }
+      .lass {
+        color: $brand_color;
+      }
+    }
+  }
+}

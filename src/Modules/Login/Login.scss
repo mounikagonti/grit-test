@@ -1,0 +1,108 @@
+.login {
+  padding: 100px 0;
+  &_wrapper {
+    @include layoutWithGrid(auto-fit, 150px, 2fr);
+    grid-auto-rows: 1fr;
+    .login_left {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .login_right {
+      box-shadow: $box_shadow_one;
+      margin-left: 3rem;
+      padding: 3rem;
+      height: 100%;
+      margin-top: auto;
+      h1 {
+        color: $brand_color;
+        margin-bottom: 0.5rem !important;
+        font-weight: 500;
+      }
+      p {
+        margin-bottom: 1.5rem;
+      }
+      .input_wrapper {
+        margin-bottom: 20px !important;
+        margin-top: 1rem !important;
+        position: relative;
+        input {
+          display: block;
+          width: 100%;
+          height: 50px;
+          padding: 0 15px;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color: $default_color;
+          background-color: $white_color;
+          background-clip: padding-box;
+          border: 1px solid #ced4da;
+          border-radius: 0.25rem;
+          &:focus {
+            outline: none !important;
+            box-shadow: none !important;
+            border: 1px solid #01d28e !important;
+          }
+        }
+        svg {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translate(-50%, -50%);
+        }
+        button {
+          padding-right: 1rem !important;
+          padding-left: 1rem !important;
+          font-weight: 400;
+          line-height: 1.5;
+          display: block;
+          width: 100%;
+          height: 50px;
+          border: none;
+          box-shadow: none !important;
+          font-size: 15px;
+          padding: 10px 20px;
+          color: $white_color;
+          border-radius: 0.375rem;
+          border: 1px solid $brand_color;
+          background: $brand_color;
+
+          cursor: pointer;
+          &:hover {
+            background: $primary_color !important;
+            border: 1px solid $primary_color !important;
+            transition: all 0.3s;
+          }
+        }
+      }
+      .login_btm_wrapper {
+        @include layoutWithFlex(center, space-between);
+        a {
+          color: $brand_color;
+        }
+        .login_btm_left {
+          @include layoutWithFlex(center, center);
+          label {
+            display: block;
+            position: relative;
+            padding-left: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            color: $brand_color;
+          }
+        }
+      }
+      .no_account {
+        text-align: center;
+        margin-top: 25px;
+        a {
+          margin-left: 5px;
+          color: $brand_color;
+        }
+      }
+    }
+  }
+}

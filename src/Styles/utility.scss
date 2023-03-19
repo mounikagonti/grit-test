@@ -1,0 +1,38 @@
+// colors
+$brand_color: #309700;
+$brand_color_hover: #125f07;
+$primary_color: #e6a31c;
+$secondary_color: #4594f0;
+$white_color: #ffff;
+$grey_color: #f7f7f7;
+$black_color: #212529;
+$default_color: #495057;
+$box_shadow: 0 2px 20px rgb(0 0 0 / 15%);
+$box_shadow_one: 0px 10px 34px -15px rgb(0 0 0 / 12%);
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// mixins
+@mixin layoutWithFlex($align, $justify, $wrap: null, $direction: null) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  @if ($wrap) {
+    flex-wrap: $wrap;
+  }
+  @if ($direction) {
+    flex-direction: $direction;
+  }
+}
+
+@mixin layoutWithGrid($column: auto-fit, $min: 150px, $max: 2fr, $gap: null) {
+  display: grid;
+  grid-template-columns: repeat($column, minmax($min, $max));
+  @if ($gap) {
+    gap: $gap;
+  }
+}

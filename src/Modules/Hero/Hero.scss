@@ -1,0 +1,31 @@
+.hero {
+  background-image: url("../../Assets/herp_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 371px;
+  position: relative;
+  @include layoutWithFlex(center, center);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #309700f5;
+  }
+  &_content {
+    padding: 160px 0 60px 0;
+    position: relative;
+    max-width: 580px;
+    text-align: center;
+    color: $white_color;
+    h1 {
+      font-size: 56px;
+      font-weight: 500;
+    }
+    p {
+      font-weight: 500;
+      font-size: 1.25rem;
+    }
+  }
+}

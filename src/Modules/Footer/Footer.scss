@@ -1,0 +1,106 @@
+footer {
+  position: relative;
+  font-size: 16px;
+  background-color: #f3f9ed;
+  padding: 80px 0 30px 0;
+
+  &::before {
+    position: absolute;
+    bottom: 0 !important;
+    content: '';
+    width: 100%;
+    background: url('../../Assets/wave.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    background-position: top center;
+    height: 300px;
+  }
+  .footer_wrapper {
+    position: relative;
+    @include layoutWithGrid(auto-fit, 150px, 4fr, 50px);
+    .address {
+      height: 100%;
+      .header_left {
+        margin-bottom: 25px;
+        @include layoutWithFlex(center, flex-start);
+        &_logo {
+          height: 40px;
+          width: 40px;
+        }
+        .brand_name_container {
+          font-size: 25px;
+          font-weight: 400;
+          margin-left: 10px;
+          .industry {
+            color: $primary_color;
+          }
+          .technology {
+            margin-left: 10px;
+            color: $secondary_color;
+          }
+        }
+      }
+      .address_text {
+        margin-bottom: 20px;
+      }
+      a {
+        color: $brand_color;
+        &:hover {
+          color: #0a58ca;
+        }
+      }
+    }
+    .useful_links {
+      height: 100%;
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      a {
+        @include layoutWithFlex(center, flex-start);
+        color: $black_color;
+        transition: 0.3s;
+        padding: 10px 0;
+      }
+    }
+    .tweets {
+      height: 100%;
+
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+    .contact_us {
+      height: 100%;
+
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 12px;
+      }
+      .social_link_wrapper {
+        @include layoutWithFlex(center, space-between);
+        .icon_wrapper {
+          display: flex;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid black;
+          @include layoutWithGrid(auto-fit, 20px, 5fr);
+          .icon {
+            @include layoutWithFlex(center, center);
+            font-size: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .footer_copyright {
+    margin-top: 2rem;
+    position: relative;
+    text-align: center;
+  }
+}
